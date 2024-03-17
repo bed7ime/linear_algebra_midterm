@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap");
+:root {
+  --red: #321325;
+  --black: #1e152a;
+}
+
+* {
+  font-family: "Anuphan", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 1s;
+  color: var(--black);
+}
+
+html {
+  font-size: 80.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  /* font-size: 24px; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+header .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.container {
+  padding-top: 3.75rem;
+}
+
+.h4 {
+  text-align: center;
+}
+
+.menu-lists {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, 35rem);
+  justify-content: center;
+}
+
+/* Search Section */
+#cart-info {
+  position: fixed;
+  top: 7.5%;
+  right: -110%;
+  height: fit-content;
+  width: 30%;
+  z-index: 1004;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+#cart-info.active {
+  right: 2.5%;
+}
+
+#cart-info #close {
+  position: absolute;
+  color: var(--black);
+  cursor: pointer;
+  top: 7.8%;
+  right: 2.78%;
+  font-size: 1.5rem;
+}
+
+.basket i {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  height: 3.35rem;
+  width: 3.35rem;
+  text-align: center;
+  line-height: 3.35rem;
+  background: #eee;
+  border-radius: 50%;
+}
+
+.basket i:hover {
+  color: #eee;
+  background: var(--red);
+  transform: rotate(360deg);
+  transition: 1s;
+}
