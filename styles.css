@@ -32,6 +32,7 @@ section {
 
 header {
   /* font-size: 24px; */
+  background: white;
   position: fixed;
   top: 0;
   left: 0;
@@ -107,4 +108,74 @@ header .flex {
   background: var(--red);
   transform: rotate(360deg);
   transition: 1s;
+}
+
+.menu-item .flex img {
+  width: 175px;
+  height: 175px;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+.menu-item .flex {
+  display: flex;
+}
+
+.menu-item .flex .text {
+  padding-left: 2rem;
+  text-align: left;
+  margin-top: 1.7rem;
+}
+
+.menu-item {
+  flex: 0 0 200px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.menu-item .layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 1s;
+  background: rgba(0, 0, 0, 0.404);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item .layer p {
+  color: white;
+}
+
+.menu-item:hover .flex {
+  transform: scale(1.1);
+}
+
+.menu-item:hover .layer {
+  opacity: 50;
+  border-radius: 12px;
+}
+
+.menu-item:hover .layer p {
+  opacity: 100;
+}
+
+.menu p {
+  padding-bottom: 1.75rem;
+}
+
+.cart-item p {
+  display: inline-block;
 }
