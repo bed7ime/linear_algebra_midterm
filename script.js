@@ -23,7 +23,7 @@ function addItemToCart(item) {
     const totalPriceElement = existingCartItem.querySelector(".total-price");
     let quantity = parseInt(quantityElement.textContent) + 1;
     quantityElement.textContent = quantity;
-    totalPriceElement.textContent = item.price * quantity;
+    totalPriceElement.textContent = `รวม ${item.price * quantity} บาท`;
   } else {
     // Create a new cart item element
     const cartItem = document.createElement("div");
@@ -33,7 +33,7 @@ function addItemToCart(item) {
       <p>${item.name} </p>
       <p>ราคา : ${item.price} บาท </p>
       <p class="quantity">1</p>
-      <p class="total-price"> รวม ${item.price} บาท</p>
+      <p class="total-price">รวม ${item.price} บาท</p>
       <button class="btn btn-danger btn-sm remove-item">Remove</button>
     `;
     document.querySelector("#cart").appendChild(cartItem);
