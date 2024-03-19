@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       (acc, item) => acc + item.price * item.quantity,
       0
     );
-    total.textContent = `Total ${totalPrice.toFixed(2)} บาท`;
+    total.textContent = `Total ${totalPrice.toFixed(2)} Baht`;
   }
 
   function addItemToCart(item) {
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     y += 10;
     Object.values(items).forEach((item) => {
       doc.text(`${item.name} price : ${item.price} Baht\nquantity : ${item.quantity} - Total ${item.price * item.quantity} Baht`, 20, y);
-      y += 5;
+      y += 20;
     });
     doc.save("order_summary.pdf");
   }
