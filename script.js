@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     doc.text("Order Summary", 20, y);
     y += 10;
     Object.values(items).forEach((item) => {
-      doc.text(`${item.name} x ${item.quantity} - รวม ${item.price * item.quantity} บาท`, 20, y);
+      doc.text(`${item.name} ราคา : ${item.price} บาท  จำนวน : ${item.quantity} - รวม ${item.price * item.quantity} บาท`, 20, y);
       y += 5;
     });
     doc.save("order_summary.pdf");
