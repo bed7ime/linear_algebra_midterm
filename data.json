@@ -1,60 +1,60 @@
 [
   {
-    "name": "บะหมี่เกี๊ยวหมูแดง",
+    "name": "Wonton noodles with red pork",
     "id": "n01",
     "price": 65,
     "img": "./imgs/n01.jpg"
   },
   {
-    "name": "บะหมี่กรอบต้มยำเย็นตาโฟ",
+    "name": "crispy boiled spicy tom yum noodle soup",
     "id": "n02",
     "price": 80,
     "img": "./imgs/n02.jpg"
   },
   {
-    "name": "บะหมี่กรอบต้มยำน้ำข้น",
+    "name": "crispy boiled creamy tom yum noodle soup",
     "id": "n03",
     "price": 70,
     "img": "./imgs/n03.jpg"
   },
   {
-    "name": "บะหมี่ต้มยำน้ำขลุกขลิก",
+    "name": "spicy tom yum noodle soup with mixed ingredients",
     "id": "n04",
     "price": 65,
     "img": "./imgs/n04.jpg"
   },
   {
-    "name": "เกี๊ยวหมูแดง",
+    "name": "red pork wonton",
     "id": "n05",
     "price": 55,
     "img": "./imgs/n05.jpg"
   },
   {
-    "name": "บะหมี่หมูสับ",
+    "name": "minced pork noodles",
     "id": "n06",
     "price": 55,
     "img": "./imgs/n06.jpg"
   },
   {
-    "name": "บะหมี่หมูแผ่น",
+    "name": "pork sheet noodles",
     "id": "n07",
     "price": 55,
     "img": "./imgs/n07.jpg"
   },
   {
-    "name": "บะหมี่หมูแดง",
+    "name": "red pork noodles",
     "id": "n08",
     "price": 55,
     "img": "./imgs/n08.jpg"
   },
   {
-    "name": "ก๋วยเตี๋ยวเย็นตาโฟ",
+    "name": "cold spicy tom yum noodle soup",
     "id": "n09",
     "price": 65,
     "img": "./imgs/n09.jpg"
   },
   {
-    "name": "ก๋วยเตี๋ยวเย็นตาโฟต้มยำ",
+    "name": "cold spicy tom yum noodle soup with tom yum flavor",
     "id": "n10",
     "price": 75,
     "img": "./imgs/n10.jpg"
