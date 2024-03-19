@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       (acc, item) => acc + item.price * item.quantity,
       0
     );
-    total.textContent = `รวมทั้งสิ้น ${totalPrice.toFixed(2)} บาท`;
+    total.textContent = `Total ${totalPrice.toFixed(2)} บาท`;
   }
 
   function addItemToCart(item) {
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (existingCartItem) {
       existingCartItem.querySelector(".quantity").textContent =
         items[item.id].quantity;
-      existingCartItem.querySelector(".total-price").textContent = `รวม ${
+      existingCartItem.querySelector(".total-price").textContent = `Total ${
         items[item.id].price * items[item.id].quantity
       } บาท`;
     } else {
@@ -38,15 +38,15 @@ document.addEventListener("DOMContentLoaded", function () {
       cartItem.dataset.id = item.id;
       cartItem.innerHTML = `
         <p>${item.name}</p>
-        <p>ราคา : ${item.price} บาท</p>
+        <p>price : ${item.price} Baht</p>
         <div class="quantity-controls">
           <button class="btn btn-sm btn-primary decrease-quantity">-</button>
           <span class="quantity">${items[item.id].quantity}</span>
           <button class="btn btn-sm btn-primary increase-quantity">+</button>
         </div>
-        <p class="total-price">รวม ${
+        <p class="total-price">Total ${
           items[item.id].price * items[item.id].quantity
-        } บาท</p>
+        } Baht</p>
         <button class="btn btn-sm btn-warning remove-item">Remove</button>
       `;
       cart.appendChild(cartItem);
@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
           } else {
             cartItem.querySelector(".quantity").textContent =
               items[item.id].quantity;
-            cartItem.querySelector(".total-price").textContent = `รวม ${
+            cartItem.querySelector(".total-price").textContent = `Total ${
               items[item.id].price * items[item.id].quantity
-            } บาท`;
+            } Baht`;
           }
           updateTotalPrice();
         });
@@ -74,9 +74,9 @@ document.addEventListener("DOMContentLoaded", function () {
           items[item.id].quantity++;
           cartItem.querySelector(".quantity").textContent =
             items[item.id].quantity;
-          cartItem.querySelector(".total-price").textContent = `รวม ${
+          cartItem.querySelector(".total-price").textContent = `Total ${
             items[item.id].price * items[item.id].quantity
-          } บาท`;
+          } Baht`;
           updateTotalPrice();
         });
 
@@ -104,11 +104,11 @@ document.addEventListener("DOMContentLoaded", function () {
               <img src="${item.img}" alt="" />
               <div class="text">
                 <p class="lead">${item.name}</p>
-                <p class="h6">ราคา : ${item.price} บาท</p>
+                <p class="h6">price : ${item.price} Baht</p>
               </div>
             </div>
             <div class="layer">
-              <p class="h4">เพิ่มลงในคำสั่งซื้อ</p>
+              <p class="h4">Add to Order</p>
             </div>
           </div>
         `;
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     doc.text("Order Summary", 20, y);
     y += 10;
     Object.values(items).forEach((item) => {
-      doc.text(`${item.name} ราคา : ${item.price} บาท  จำนวน : ${item.quantity} - รวม ${item.price * item.quantity} บาท`, 20, y);
+      doc.text(`${item.name} price : ${item.price} Baht  quantity : ${item.quantity} - Total ${item.price * item.quantity} Baht`, 20, y);
       y += 5;
     });
     doc.save("order_summary.pdf");
