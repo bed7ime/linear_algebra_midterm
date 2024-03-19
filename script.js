@@ -123,4 +123,21 @@ document.addEventListener("DOMContentLoaded", function () {
     cart.innerHTML = "";
     updateTotalPrice();
   });
+
+  document.querySelector("#place-order").addEventListener("click", function () {
+    printPDF();
+  });
+
+  function printPDF() {
+    const doc = new jsPDF();
+    let y = 20;
+    doc.text("Order Summary", 20, y);
+    y += 10;
+    Object.values(items).forEach((item) => {
+      doc.text(`${item.name} x ${item.quantity} - รวม ${item.price * item.quantity} บาท`, 20, y);
+      y += 5;
+    });
+    doc.save("order_summary.pdf");
+  }
 });
+
