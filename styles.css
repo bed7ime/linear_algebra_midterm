@@ -18,7 +18,7 @@
 }
 
 html {
-  font-size: 80.5%;
+  font-size: 85.5%;
   overflow-x: hidden;
   scroll-padding-top: 5.5rem;
   scroll-behavior: smooth;
@@ -69,7 +69,7 @@ header .flex {
 /* Search Section */
 #cart-info {
   position: fixed;
-  top: 7.5%;
+  top: 8%;
   right: -110%;
   height: fit-content;
   width: 30%;
@@ -83,14 +83,14 @@ header .flex {
   right: 2.5%;
 }
 
-#cart-info #close {
+/* #cart-info #close {
   position: absolute;
   color: var(--black);
   cursor: pointer;
   top: 7.8%;
   right: 2.78%;
   font-size: 1.5rem;
-}
+} */
 
 .basket i {
   cursor: pointer;
@@ -178,4 +178,9 @@ header .flex {
 
 .cart-item p {
   display: inline-block;
+}
+
+#cart {
+  max-height: 550px;
+  overflow-y: auto;
 }

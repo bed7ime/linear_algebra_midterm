@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#cart-info").classList.toggle("active");
   });
 
-  document.querySelector("#close").addEventListener("click", function () {
-    document.querySelector("#cart-info").classList.remove("active");
-  });
+  // document.querySelector("#close").addEventListener("click", function () {
+  //   document.querySelector("#cart-info").classList.remove("active");
+  // });
 
   function updateTotalPrice() {
     let totalPrice = Object.values(items).reduce(
@@ -129,15 +129,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function printPDF() {
-    const doc = new jsPDF();
-    let y = 20;
-    doc.text("Order Summary", 20, y);
-    y += 10;
+    let customerName = document.getElementById("customerName").value;
+    let totalPrice = 0;
+    const doc = new jsPDF({ unit: "mm", format: [100, 150] });
+    let y = 15;
+    doc.setFontSize(10);
+    doc.text("Order Summary", 37, y);
+    y += 7;
     Object.values(items).forEach((item) => {
-      doc.text(`${item.name} price : ${item.price} Baht\nquantity : ${item.quantity} - Total ${item.price * item.quantity} Baht`, 20, y);
-      y += 20;
+      doc.setFontSize(8);
+      doc.text(
+        `${item.name} price : ${item.price} Baht\nquantity : ${
+          item.quantity
+        } - Total ${item.price * item.quantity} Baht`,
+        7,
+        y
+      );
+      y += 10;
+      totalPrice += item.price * item.quantity;
     });
+    doc.text(
+      `Total of All order : ${totalPrice} Baht \nCustomer name : ${customerName}`,
+      7,
+      y
+    );
     doc.save("order_summary.pdf");
   }
 });
-
